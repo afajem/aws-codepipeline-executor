@@ -1,0 +1,21 @@
+{
+  "name": "CodePipelineExecutor",
+  "version": "1.0.0",
+  "description": "AWS Lambda function to periodically invoke an AWS CodePipeline.",
+  "main": "index.js",
+  "scripts": {
+    "setup": "mkdir -p dist",
+    "bundle": "zip -r dist/bundle.zip node_modules && zip -j dist/bundle.zip src/index.js",
+    "deploy": "aws lambda update-function-code --function-name CodePipelineExecutor --zip-file fileb://./dist/bundle.zip",
+    "build": "npm install && npm run setup && npm run bundle && npm run deploy"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "codepipeline"
+  ],
+  "author": "Niran Fajemisin (https://github.com/afajem)",
+  "license": "MIT",
+  "dependencies": {
+   }
+}
