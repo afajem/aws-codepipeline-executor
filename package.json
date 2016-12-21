@@ -1,7 +1,7 @@
 {
   "name": "CodePipelineExecutor",
   "version": "1.0.0",
-  "description": "AWS Lambda function to periodically invoke an AWS CodePipeline.",
+  "description": "AWS Lambda function to invoke an AWS CodePipeline.",
   "main": "index.js",
   "scripts": {
     "setup": "mkdir -p dist",
